@@ -1,9 +1,26 @@
 local platypus = require "platypus.platypus"
+local gameobjects = require "main.modules.gameobjects"
 
 local speed = 150
 local jump_force = 450
 
+local LEFT = hash("left")
+local RIGHT = hash("right")
+local JUMP = hash("jump")
+
+local ANIM_RUN = hash("run")
+local ANIM_JUMP = hash("jump")
+local ANIM_IDLE = hash("idle")
+
+local function play_animation(self, animation)
+	if self.current_animation ~= animation then
+		msg.post("#sprite", "play_animation", { id = animation })
+		self.current_animation = animation
+	end
+end
+
 function init(self)
+	gameobjects.save(hash("player"))
 	msg.post(".", "acquire_input_focus")
 	self.platypus = platypus.create({
 		collisions = {
@@ -16,9 +33,23 @@ function init(self)
 		gravity = -800,
 		max_velocity = 580,
 	})
+	self.current_animation = ANIM_IDLE
+	self.input_state = {}
 end
 
 function update(self, dt)
+	local ground_contact = self.platypus.has_ground_contact()
+	if self.input_state[LEFT] then
+		self.platypus.left(speed)
+		play_animation(self, ground_contact and ANIM_RUN or ANIM_JUMP)
+		sprite.set_hflip("#sprite", true)
+	elseif self.input_state[RIGHT] then
+		self.platypus.right(speed)
+		play_animation(self, ground_contact and ANIM_RUN or ANIM_JUMP)
+		sprite.set_hflip("#sprite", false)
+	else
+		play_animation(self, ground_contact and ANIM_IDLE or ANIM_JUMP)
+	end
 	self.platypus.update(dt)
 end
 
@@ -27,15 +58,18 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("left") then
-		self.platypus.left(speed)
-	elseif action_id == hash("right") then
-		self.platypus.right(speed)
-	elseif action_id == hash("jump") then
+	if not action_id then return end
+	if action.pressed then
+		self.input_state[action_id] = true
+	elseif action.released then
+		self.input_state[action_id] = nil
+	end
+
+	if action_id == JUMP then
 		if action.pressed then
 			self.platypus.jump(jump_force)
 		elseif action.released then
-			self.platypus.abort_jump(0.5)
+			self.platypus.abort_jump()
 		end
 	end
 end

@@ -1,10 +1,11 @@
 name: "main"
 instances {
   id: "camera"
-  prototype: "/rendercam/camera.go"
+  prototype: "/orthographic/camera.go"
+  children: "background"
   position {
     x: 0.0
-    y: 0.0
+    y: 200.0
     z: 0.0
   }
   rotation {
@@ -16,22 +17,27 @@ instances {
   component_properties {
     id: "script"
     properties {
-      id: "nearZ"
+      id: "near_z"
       value: "-10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "farZ"
+      id: "far_z"
       value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "fixedAspectRatio"
-      value: "true"
-      type: PROPERTY_TYPE_BOOLEAN
+      id: "zoom"
+      value: "2.0"
+      type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "useViewArea"
+      id: "projection"
+      value: "FIXED_AUTO"
+      type: PROPERTY_TYPE_HASH
+    }
+    properties {
+      id: "enabled"
       value: "true"
       type: PROPERTY_TYPE_BOOLEAN
     }
@@ -97,6 +103,67 @@ embedded_instances {
   }
 }
 embedded_instances {
+  id: "testmap"
+  data: "components {\n"
+  "  id: \"testmap\"\n"
+  "  component: \"/main/testmap/testmap.tilemap\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"collisionobject\"\n"
+  "  type: \"collisionobject\"\n"
+  "  data: \"collision_shape: \\\"/main/testmap/testmap.tilemap\\\"\\n"
+  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
+  "mass: 0.0\\n"
+  "friction: 0.1\\n"
+  "restitution: 0.5\\n"
+  "group: \\\"ground\\\"\\n"
+  "mask: \\\"player\\\"\\n"
+  "linear_damping: 0.0\\n"
+  "angular_damping: 0.0\\n"
+  "locked_rotation: false\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
   id: "background"
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
@@ -131,42 +198,16 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
+    x: 0.5
+    y: 0.5
     z: 1.0
   }
 }
 embedded_instances {
-  id: "testmap"
+  id: "main"
   data: "components {\n"
-  "  id: \"testmap\"\n"
-  "  component: \"/main/testmap/testmap.tilemap\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"collisionobject\"\n"
-  "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"/main/testmap/testmap.tilemap\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_STATIC\\n"
-  "mass: 0.0\\n"
-  "friction: 0.1\\n"
-  "restitution: 0.5\\n"
-  "group: \\\"ground\\\"\\n"
-  "mask: \\\"player\\\"\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
-  "\"\n"
+  "  id: \"camera_follow\"\n"
+  "  component: \"/main/camera_follow.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
