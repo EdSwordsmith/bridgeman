@@ -1,8 +1,12 @@
 key_trigger {
   input: KEY_RIGHT
-  action: "input_right"
+  action: "right"
 }
 key_trigger {
   input: KEY_LEFT
-  action: "input_left"
+  action: "left"
+}
+key_trigger {
+  input: KEY_SPACE
+  action: "jump"
 }

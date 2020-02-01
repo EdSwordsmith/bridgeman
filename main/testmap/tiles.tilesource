@@ -1,0 +1,15 @@
+image: "/assets/environment/Ground.png"
+tile_width: 32
+tile_height: 32
+tile_margin: 0
+tile_spacing: 0
+collision: "/assets/environment/Ground.png"
+material_tag: "tile"
+convex_hulls {
+  index: 0
+  count: 5
+  collision_group: "ground"
+}
+collision_groups: "ground"
+extrude_borders: 2
+inner_padding: 0
