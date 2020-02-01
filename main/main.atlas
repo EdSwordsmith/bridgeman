@@ -37,6 +37,9 @@ images {
 images {
   image: "/assets/environment/bg.png"
 }
+images {
+  image: "/assets/images/wood.png"
+}
 margin: 0
 extrude_borders: 2
 inner_padding: 0

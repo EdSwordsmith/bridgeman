@@ -15,9 +15,9 @@ function M.use(num)
 	return true
 end
 
-function M.pick_up(num)
+function M.pick_up()
 	if num < 1 then return end
-	item_count = item_count + num
+	item_count = item_count + 1
 end
 
 return M

@@ -1,4 +1,4 @@
-tile_set: "/main/testmap/tiles.tilesource"
+tile_set: "/main/map/tiles.tilesource"
 layers {
   id: "layer1"
   z: 0.0

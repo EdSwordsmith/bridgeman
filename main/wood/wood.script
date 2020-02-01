@@ -1,0 +1,8 @@
+local inventory = require "main.modules.inventory"
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") then
+		inventory.pick_up(1)
+		go.delete()
+	end
+end
