@@ -1,8 +1,6 @@
 local monarch = require 'monarch.monarch'
 
 function init(self)
-	msg.post("#", hash("game"))
-
 	-- Discord Rich Integration
 	local client_id = "673220124123201614"
 	discordrich.initialize(client_id)
@@ -11,8 +9,6 @@ function init(self)
 		details = "I'm repairing bridges!",
 		large_image_key = "webp_net-resizeimage"
 	})
-end
 
-function on_message(self, message_id, message, sender)
-	monarch.show(message_id)
+	monarch.show(hash("game"))
 end
