@@ -41,6 +41,11 @@ instances {
       value: "true"
       type: PROPERTY_TYPE_BOOLEAN
     }
+    properties {
+      id: "follow_target"
+      value: ""
+      type: PROPERTY_TYPE_HASH
+    }
   }
   scale3 {
     x: 1.0
