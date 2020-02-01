@@ -1,0 +1,4 @@
+function init(self)
+	collectionfactory.create("#collectionfactory")
+	msg.post(".", "acquire_input_focus")
+end

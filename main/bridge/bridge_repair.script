@@ -1,0 +1,11 @@
+local inventory = require "main.modules.inventory"
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("trigger_response") then
+		if inventory.use() then
+			local position = go.get_position()
+			factory.create("#factory", position)
+			go.delete()
+		end
+	end
+end

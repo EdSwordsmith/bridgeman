@@ -1,50 +1,30 @@
 name: "map"
 instances {
-  id: "wood1"
-  prototype: "/main/wood/wood.go"
-  position {
-    x: 225.0
-    y: 113.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "wood3"
-  prototype: "/main/wood/wood.go"
-  position {
-    x: 169.0
-    y: 114.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
   id: "wood2"
   prototype: "/main/wood/wood.go"
   position {
     x: 22.0
     y: 208.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "broken_bridge"
+  prototype: "/main/bridge/broken_bridge.go"
+  position {
+    x: 865.0
+    y: 142.0
     z: 0.0
   }
   rotation {
@@ -493,9 +473,7 @@ embedded_instances {
 }
 embedded_instances {
   id: "pickups"
-  children: "wood1"
   children: "wood2"
-  children: "wood3"
   data: ""
   position {
     x: 0.0

@@ -1,5 +1,6 @@
 local platypus = require "platypus.platypus"
-local gameobjects = require "main.modules.findplayer"
+local monarch = require "monarch.monarch"
+local gameobjects = require "main.modules.player"
 
 local speed = 150
 local jump_force = 450
@@ -51,6 +52,11 @@ function update(self, dt)
 		play_animation(self, ground_contact and ANIM_IDLE or ANIM_JUMP)
 	end
 	self.platypus.update(dt)
+
+	local pos = go.get_position()
+	if pos.y < -220 then
+		monarch.show(hash("game"))
+	end
 end
 
 function on_message(self, message_id, message, sender)
