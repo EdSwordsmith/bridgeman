@@ -3,8 +3,8 @@ instances {
   id: "camera"
   prototype: "/rendercam/camera.go"
   position {
-    x: -76.0
-    y: -63.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
@@ -26,13 +26,18 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "fixedAspectRatio"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
       id: "useViewArea"
       value: "true"
       type: PROPERTY_TYPE_BOOLEAN
     }
     properties {
       id: "viewArea"
-      value: "500.0, 500.0, 0.0"
+      value: "1920.0, 1080.0, 0.0"
       type: PROPERTY_TYPE_VECTOR3
     }
   }
@@ -80,8 +85,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: -83.0
-    y: -17.0
+    x: 0.0
+    y: 95.0
     z: 0.0
   }
   rotation {
@@ -131,9 +136,9 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 0.24
-    y: 0.24
-    z: 0.24
+    x: 1.0
+    y: 1.0
+    z: 1.0
   }
 }
 embedded_instances {
@@ -207,8 +212,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: -39.0
-    y: -85.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
