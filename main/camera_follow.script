@@ -1,4 +1,4 @@
-local gameobjects = require "main.modules.gameobjects"
+local gameobjects = require "main.modules.findplayer"
 
 function init(self)
 	local player = gameobjects.get(hash("player"))
@@ -8,6 +8,6 @@ function init(self)
 		lerp = 0.8, 
 		horizontal = true, 
 		vertical = false, 
-		immediate = true 
+		immediate = true
 	})
 end
