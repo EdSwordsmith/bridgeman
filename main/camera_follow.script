@@ -2,6 +2,7 @@ local gameobjects = require "main.modules.gameobjects"
 
 function init(self)
 	local player = gameobjects.get(hash("player"))
+	sound.play("#sound")
 	msg.post("camera", "follow", { 
 		target = player, 
 		lerp = 0.8, 
