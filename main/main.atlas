@@ -1,11 +1,41 @@
 images {
-  image: "/assets/images/background.png"
+  image: "/assets/repair/repairing bar1.png"
 }
 images {
-  image: "/assets/images/logo.png"
+  image: "/assets/bridge/bridge1.png"
 }
 images {
-  image: "/builtins/graphics/particle_blob.png"
+  image: "/assets/bridge/bridge2.png"
+}
+images {
+  image: "/assets/bridge/bridge3.png"
+}
+images {
+  image: "/assets/bridge/bridge4.png"
+}
+images {
+  image: "/assets/bridge/bridge5.png"
+}
+images {
+  image: "/assets/bridge/bridge6.png"
+}
+images {
+  image: "/assets/environment/dirt.png"
+}
+images {
+  image: "/assets/environment/Ground.png"
+}
+images {
+  image: "/assets/repair/repairing bar2.png"
+}
+images {
+  image: "/assets/repair/repairing bar3.png"
+}
+images {
+  image: "/assets/repair/repairing bar4.png"
+}
+images {
+  image: "/assets/environment/bg.png"
 }
 margin: 0
 extrude_borders: 2

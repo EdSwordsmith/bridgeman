@@ -1,0 +1,47 @@
+animations {
+  id: "idle"
+  images {
+    image: "/assets/images/character/Character_idle1.png"
+  }
+  images {
+    image: "/assets/images/character/Character_idle2.png"
+  }
+  images {
+    image: "/assets/images/character/Character_idle3.png"
+  }
+  images {
+    image: "/assets/images/character/Character_idle4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 5
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "run"
+  images {
+    image: "/assets/images/character/character_run1.png"
+  }
+  images {
+    image: "/assets/images/character/character_run2.png"
+  }
+  images {
+    image: "/assets/images/character/character_run3.png"
+  }
+  images {
+    image: "/assets/images/character/character_run4.png"
+  }
+  images {
+    image: "/assets/images/character/character_run5.png"
+  }
+  images {
+    image: "/assets/images/character/character_run6.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 5
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

@@ -1,5 +1,5 @@
 [project]
-title = GlobalGameJam2020
+title = PlaceHolderTitle
 dependencies = https://github.com/rgrams/rendercam/archive/v1.0.1.zip
 
 [bootstrap]
@@ -11,8 +11,9 @@ game_binding = /input/game.input_bindingc
 use_accelerometer = 0
 
 [display]
-width = 1280
-height = 720
+width = 1920
+height = 1080
+update_frequency = 60
 
 [script]
 shared_state = 1
@@ -27,6 +28,7 @@ app_icon = /assets/app_icons/appicon.icns
 input_method = HiddenInputField
 
 [physics]
-gravity_y = -1000.0
+gravity_y = -10.0
 scale = 0.01
+debug = 1
 
