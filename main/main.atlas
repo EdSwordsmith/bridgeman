@@ -35,10 +35,19 @@ images {
   image: "/assets/repair/repairing bar4.png"
 }
 images {
-  image: "/assets/environment/bg.png"
+  image: "/assets/images/wood.png"
 }
 images {
-  image: "/assets/images/wood.png"
+  image: "/assets/environment/parallax-mountain-bg.png"
+}
+images {
+  image: "/assets/environment/parallax-mountain-montain-far.png"
+}
+images {
+  image: "/assets/environment/parallax-mountain-mountains.png"
+}
+images {
+  image: "/assets/environment/parallax-mountain-trees.png"
 }
 margin: 0
 extrude_borders: 2
