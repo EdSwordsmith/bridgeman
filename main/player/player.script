@@ -1,6 +1,7 @@
 local platypus = require "platypus.platypus"
 local monarch = require "monarch.monarch"
 local gameobjects = require "main.modules.player"
+local inventory = require "main.modules.inventory"
 
 local speed = 150
 local jump_force = 450
@@ -56,6 +57,7 @@ function update(self, dt)
 	local pos = go.get_position()
 	if pos.y < -220 then
 		monarch.show(hash("game"))
+		inventory.item_count = 0
 	end
 end
 
