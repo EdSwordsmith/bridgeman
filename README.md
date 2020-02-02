@@ -4,6 +4,6 @@ A simple platformer where you, my man, have to repair them bridges. Collect the 
 
 A game made for Global Game Jam 2020 made in 48 hours.
 
-[https://edswordsmith.itch.io/bridgeman](Itch.io Page)
-[https://globalgamejam.org/2020/games/bridgeman-0](Global Game Jam Page)
+[Itch.io Page](https://edswordsmith.itch.io/bridgeman)
+[Global Game Jam Page](https://globalgamejam.org/2020/games/bridgeman-0)
 ---
