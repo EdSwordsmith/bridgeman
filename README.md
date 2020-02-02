@@ -1,19 +1,9 @@
-# Welcome to Defold
+# Bridgeman
 
-This project was created from the "desktop" project template. This means that the settings in ["game.project"](defold://open?path=/game.project) have been changed to be suitable for a desktop game:
+A simple platformer where you, my man, have to repair them bridges. Collect the wood for fixing them bridges, then just walk over to them and they will be fixed. I trust you with this very important job.
 
-- The screen size is set to 1280x720
-- Projection is set to Fixed Fit
-- macOS and Windows icons are set
-- Mouse clicks are bound to action "touch"
-- A simple script in a game object is set up to receive and react to input
+A game made for Global Game Jam 2020 made in 48 hours.
 
-[Build and run](defold://build) to see it in action. You can of course alter these settings to fit your needs.
-
-Check out [the documentation pages](https://defold.com/learn) for examples, tutorials, manuals and API docs.
-
-If you run into trouble, help is available in [our forum](https://forum.defold.com).
-
-Happy Defolding!
-
+[https://edswordsmith.itch.io/bridgeman](Itch.io Page)
+[https://globalgamejam.org/2020/games/bridgeman-0](Global Game Jam Page)
 ---
