@@ -7,7 +7,7 @@ function init(self)
 		target = player, 
 		lerp = 0.8, 
 		horizontal = true, 
-		vertical = false, 
+		vertical = true, 
 		immediate = true 
 	})
 end
