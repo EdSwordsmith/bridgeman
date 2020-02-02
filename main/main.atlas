@@ -16,9 +16,6 @@ images {
 images {
   image: "/assets/environment/parallax-mountain-trees.png"
 }
-images {
-  image: "/assets/environment/test.png"
-}
 margin: 0
 extrude_borders: 2
 inner_padding: 0

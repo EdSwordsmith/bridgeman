@@ -51,8 +51,6 @@ function update(self, dt)
 	else
 		play_animation(self, ground_contact and ANIM_IDLE or ANIM_JUMP)
 	end
-	--if go.get_position(s
-	
 	self.platypus.update(dt)
 
 	local pos = go.get_position()
