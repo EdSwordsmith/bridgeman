@@ -1,7 +1,7 @@
 name: "game"
 instances {
   id: "camera"
-  prototype: "/orthographic/camera.go"
+  prototype: "/rendercam/camera.go"
   children: "sky"
   position {
     x: 0.0
@@ -17,34 +17,29 @@ instances {
   component_properties {
     id: "script"
     properties {
-      id: "near_z"
+      id: "nearZ"
       value: "-10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "far_z"
+      id: "farZ"
       value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
-      id: "zoom"
-      value: "2.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
-      id: "projection"
-      value: "FIXED_AUTO"
-      type: PROPERTY_TYPE_HASH
-    }
-    properties {
-      id: "enabled"
+      id: "fixedAspectRatio"
       value: "true"
       type: PROPERTY_TYPE_BOOLEAN
     }
     properties {
-      id: "follow_target"
-      value: ""
-      type: PROPERTY_TYPE_HASH
+      id: "useViewArea"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "viewArea"
+      value: "1024.0, 576.0, 0.0"
+      type: PROPERTY_TYPE_VECTOR3
     }
   }
   scale3 {
@@ -59,7 +54,7 @@ collection_instances {
   position {
     x: 0.0
     y: 0.0
-    z: 0.0
+    z: -1.0
   }
   rotation {
     x: 0.0
@@ -111,8 +106,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: -369.0
-    y: 191.0
+    x: -284.0
+    y: 173.0
     z: 0.0
   }
   rotation {
@@ -132,6 +127,21 @@ embedded_instances {
   data: "components {\n"
   "  id: \"game\"\n"
   "  component: \"/main/game/game.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"hud\"\n"
+  "  component: \"/main/game/hud.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -219,8 +229,8 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 3.5
-    y: 3.5
+    x: 4.0
+    y: 4.0
     z: 1.0
   }
 }

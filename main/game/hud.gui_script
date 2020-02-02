@@ -1,0 +1,14 @@
+local inventory = require "main.modules.inventory"
+
+function init(self)
+	self.count = inventory.item_count
+	self.node = gui.get_node("wood")
+	gui.set_text(self.node, "Wood: " .. self.count)
+end
+
+function update(self, dt)
+	if self.count ~= inventory.item_count then
+		self.count = inventory.item_count
+		gui.set_text(self.node, "Wood: " .. self.count)
+	end
+end

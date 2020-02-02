@@ -1,18 +1,18 @@
 local M = {}
 
-local item_count = 0
+M.item_count = 0
 
 function M.use()
-	if item_count < 1 then
+	if M.item_count < 1 then
 		return false
 	end
 
-	item_count = item_count - 1
+	M.item_count = M.item_count - 1
 	return true
 end
 
 function M.pick_up()
-	item_count = item_count + 1
+	M.item_count = M.item_count + 1
 end
 
 return M

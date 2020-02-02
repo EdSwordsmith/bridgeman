@@ -3,7 +3,7 @@ local M = {}
 local game_objects = {}
 
 function M.save(id)
-	game_objects[id] = msg.url()
+	game_objects[id] = go.get_id()
 end
 
 function M.get(id)

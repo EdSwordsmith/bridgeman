@@ -2,7 +2,7 @@ local monarch = require "monarch.monarch"
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") then
-		monarch.show("game")
-		print("You win")
+		print("hi")
+		monarch.show("win")
 	end
 end

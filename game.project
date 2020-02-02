@@ -1,10 +1,10 @@
 [project]
 title = Bridgeman
-dependencies = https://github.com/britzl/Platypus/archive/master.zip,https://github.com/britzl/defold-orthographic/archive/master.zip,https://github.com/britzl/monarch/archive/master.zip,https://github.com/subsoap/discordrich/archive/v1.0.4.zip
+dependencies = https://github.com/britzl/Platypus/archive/master.zip,https://github.com/britzl/monarch/archive/master.zip,https://github.com/subsoap/discordrich/archive/v1.0.4.zip,https://github.com/rgrams/rendercam/archive/v1.0.1.zip
 
 [bootstrap]
 main_collection = /main/main.collectionc
-render = /orthographic/render/orthographic.renderc
+render = /rendercam/rendercam.renderc
 
 [input]
 use_accelerometer = 0

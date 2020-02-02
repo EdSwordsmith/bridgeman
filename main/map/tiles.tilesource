@@ -1,9 +1,9 @@
-image: "/assets/environment/ground.png"
+image: "/assets/environment/Ground.png"
 tile_width: 32
 tile_height: 32
 tile_margin: 0
 tile_spacing: 0
-collision: "/assets/environment/ground.png"
+collision: "/assets/environment/Ground.png"
 material_tag: "tile"
 convex_hulls {
   index: 0

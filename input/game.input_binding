@@ -14,3 +14,7 @@ key_trigger {
   input: KEY_UP
   action: "jump"
 }
+key_trigger {
+  input: KEY_ENTER
+  action: "enter"
+}
