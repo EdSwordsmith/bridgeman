@@ -1,0 +1,14 @@
+local monarch = require 'monarch.monarch'
+
+function init(self)
+	-- Discord Rich Integration
+	local client_id = "673220124123201614"
+	discordrich.initialize(client_id)
+	discordrich.update_presence({
+		state = "Thank you for playing",
+		details = "I'm repairing bridges!",
+		large_image_key = "webp_net-resizeimage"
+	})
+
+	monarch.show(hash("game"))
+end

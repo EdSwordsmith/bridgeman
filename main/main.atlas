@@ -1,38 +1,5 @@
 images {
-  image: "/assets/repair/repairing bar1.png"
-}
-images {
-  image: "/assets/bridge/bridge1.png"
-}
-images {
-  image: "/assets/bridge/bridge2.png"
-}
-images {
-  image: "/assets/bridge/bridge3.png"
-}
-images {
-  image: "/assets/bridge/bridge4.png"
-}
-images {
-  image: "/assets/bridge/bridge5.png"
-}
-images {
-  image: "/assets/bridge/bridge6.png"
-}
-images {
-  image: "/assets/environment/dirt.png"
-}
-images {
-  image: "/assets/environment/Ground.png"
-}
-images {
-  image: "/assets/repair/repairing bar2.png"
-}
-images {
-  image: "/assets/repair/repairing bar3.png"
-}
-images {
-  image: "/assets/repair/repairing bar4.png"
+  image: "/assets/environment/ground.png"
 }
 images {
   image: "/assets/images/wood.png"
